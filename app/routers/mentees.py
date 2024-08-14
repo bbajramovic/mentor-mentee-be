@@ -1,6 +1,8 @@
 from fastapi import APIRouter
 from app.models import Mentee
 from app.db import db
+from app.db import get_all_object
+from pydantic import BaseModel
 
 router = APIRouter()
 
@@ -10,25 +12,12 @@ async def get_mentee_info(id: int):
     return {"mentee": ""}
 
 
-@router.get("/list", tags=["mentees"])
-async def get_mentees():
+@router.get("/list/", tags=["mentees"])
+async def read_items() :
     # TODO: Get data from firebase
-    # mentees = db.child("mentees").get()
-    # print(mentees)
-    return {
-        "list": [
-            {
-                # mentee abc from database!
-            }
-        ]
-    }
-    # print(mentees.val())
-    # data = []
-    # 
-    # for mentee in mentees.each():
-        # data.append(mentee.val())
-    
-    # return {"mentees": data}
+    data = get_all_object("mentees")
+    return {"mentees": data}
+
 
 @router.post("/add", tags=["mentees"])
 async def add_mentee(mentee: Mentee):

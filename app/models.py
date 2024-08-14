@@ -23,7 +23,8 @@ class MenteeDetails(BaseModel):
     industries: List[str]
     softSkills: List[str]
     preferredMentorGender: str
-    preferredForeignMentor: str
+    preferredForeignMentor: bool
+    preferredMentorType: str
 
 class Bio(BaseModel):
     selfIntroduction: str

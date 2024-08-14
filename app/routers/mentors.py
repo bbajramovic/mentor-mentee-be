@@ -10,16 +10,19 @@ async def get_mentor_info(id: int):
     return {"mentor": ""}
 
 
-@router.get("/list", tags=["mentors"])
+@router.get("/list/", tags=["mentors"])
 async def get_mentors():
     # TODO: Get data from firebase
-    return {
-        "list": [
-            {
-                # mentor abc from database!
-            }
-        ]
-    }
+    mentors = db.child("mentors").get()
+    print(mentors)
+    # return []
+    # print(mentees.val())
+    data = []
+    
+    for mentor in mentors.each():
+        data.append(mentor.val())
+    
+    return {"mentors": data}
 
 @router.post("/add", tags=["mentors"])
 async def add_mentor(mentor: Mentor):

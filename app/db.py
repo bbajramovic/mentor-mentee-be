@@ -21,4 +21,10 @@ auth = firebase.auth()
 
 db = firebase.database()
 
-
+def get_all_object(object_name):
+    objects = db.child(object_name).get()
+    data = []
+    for obj in objects.each():
+        data.append(obj.val())
+    
+    return data

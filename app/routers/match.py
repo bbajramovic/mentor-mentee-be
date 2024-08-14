@@ -1,19 +1,7 @@
 from fastapi import APIRouter
+from app.db import get_all_object
 from app.utils.matching import calculateMatching
 router = APIRouter()
-
-class mockDB():
-    def get_all_mentors():
-        return []
-    def get_all_mentees():
-        return []
-    
-db = mockDB()
-
-# Get match by mentor
-
-
-
 
 @router.get("/list", tags=["match"])
 async def get_all_match():
@@ -21,8 +9,8 @@ async def get_all_match():
     # Get all mentors, all mentees
     # Iteratate through each
     
-    mentees = db.get_all_mentees()
-    mentors = db.get_all_mentors()
+    mentees = get_all_object("mentees")
+    mentors = get_all_object("mentors")
     
     # TODO: 
     # Filter all mentees who have been matched
