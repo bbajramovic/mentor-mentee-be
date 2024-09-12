@@ -1,6 +1,12 @@
 from pydantic import BaseModel
-from app.models import Mentee, Mentor
+from app.db import db
+from app.models import Mentee, Mentor, Match, Group, MatchMentee
 from app.utils.array import find_common_element
+from typing import List, Optional
+import datetime
+import uuid
+import math
+
 
 def calculateMatchingRate(mentee:Mentee, mentor:Mentor):
     total_points = 0
@@ -23,31 +29,56 @@ def calculateMatchingRate(mentee:Mentee, mentor:Mentor):
     return total_points
 
     
-  
+#  Read list of mentees and mentors from mentor.json and mentee.json
+#  Generate a match with the mentees and mentors
 
-def calculateMatching(mentees, mentors):
-    mentor_match_mentee = []
+def generateGroup(mentees, mentors, matchName:Optional[str] = None):
+    groups:List[Group] = []
+    candidates = []
+    max_group_size = math.ceil(len(mentees) / len(mentors))
+    print("max_gr_sz",max_group_size)
     for mentor in mentors:
-        mentees_of_mentor = []
-        for mentee in mentees: 
-            rate = calculateMatchingRate(mentee, mentor)
-
-            result = {
-                "match_rate": rate, 
-                "mentee": mentee["id"],
-                "mentor": mentor["id"],
-                # TODO:
-                # Maybe we want to add other field for preview! To save cost too. 
-            }
-            
-            mentees_of_mentor.append(result)
-        
-        result = {
-            "mentor": mentor["id"],
-            "name": mentor["fullName"], 
-            "mentees": mentees_of_mentor # TODO: Consider to reduce result by only top 5!
+        for mentee in mentees:
+            score = calculateMatchingRate(mentee, mentor)
+            candidates.append({
+                "mentee": mentee,
+                "mentor": mentor,
+                "score": score
+            })
+    
+    candidates.sort(key=lambda x: x["score"], reverse=True)
+    unmatched_mentees = mentees.copy()
+    target_mentor = 0
+    
+    while len(unmatched_mentees) > 0:
+        group:Group = {
+            "id":target_mentor,
+            "mentorId": mentors[target_mentor]["id"],
+            "mentees": [],
         }
+        for candidate in candidates:
+            if candidate["mentor"] == mentors[target_mentor] and candidate["mentee"] in unmatched_mentees and len(group['mentees']) < max_group_size:
+                new_match_mentee:MatchMentee = {
+                    "menteeId": candidate["mentee"]["id"],
+                    "menteeName": candidate["mentee"]["fullName"],
+                    "matchRate": candidate["score"]
+                }
+                group["mentees"].append(new_match_mentee)
+                unmatched_mentees.remove(candidate["mentee"])
+                candidates.remove(candidate)
+        groups.append(group)
+        target_mentor += 1
+        target_mentor = target_mentor % len(mentors)
         
-        mentor_match_mentee.append(result)
-    return mentor_match_mentee
+    new_match:Match = {
+        "uid": str(uuid.uuid4()),
+        "createdAt": str(datetime.datetime.now()),
+        "groups": groups,
+        "matchName": matchName if matchName else "Match " + str(datetime.datetime.now())
+    }
+    
+    
+    
+    
+    return new_match        
             

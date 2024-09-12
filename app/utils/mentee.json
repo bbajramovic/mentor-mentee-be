@@ -1,0 +1,1527 @@
+[
+  {
+    "id": "1",
+    "uuid": "abc12345-e89b-12d3-a456-426614174001",
+    "fullName": "Nguyen Van A",
+    "phoneNumber": "0912345678",
+    "email": "nguyen.vana@example.com",
+    "gender": "male",
+    "homeTown": "HaNoi",
+    "currentLocation": {
+      "province": "HaNoi"
+    },
+    "birthYear": 2002,
+    "education": {
+      "currentSchool": "Vietnam National University",
+      "major": "it_sw_ai",
+      "currentSchoolYear": "junior",
+      "latestGPA": 3.8
+    },
+    "occupation": {
+      "employmentStatus": "intern",
+      "companyName": "Tech Startups",
+      "position": "Software Development Intern",
+      "industry": "it_sw_ai"
+    },
+    "mentee": {
+      "industries": ["it_sw_ai", "fin_invest"],
+      "softSkills": ["comm", "teamwork", "career_orient"],
+      "preferredMentorGender": "male",
+      "preferredForeignMentor": true,
+      "preferredMentorType": "elite"
+    },
+    "bio": {
+      "selfIntroduction": "Aspiring software developer looking to advance my skills and career.",
+      "favoriteQuote": "Code is like humor. When you have to explain it, it’s bad.",
+      "hobbies": ["Coding", "Playing video games", "Reading tech blogs"],
+      "favoriteBook": "Clean Code by Robert C. Martin",
+      "favoriteMovie": "The Matrix"
+    }
+  },
+  {
+    "id": "2",
+    "uuid": "abc12345-e89b-12d3-a456-426614174002",
+    "fullName": "Le Thi B",
+    "phoneNumber": "0987654321",
+    "email": "le.thib@example.com",
+    "gender": "female",
+    "homeTown": "DaNang",
+    "currentLocation": {
+      "province": "DaNang"
+    },
+    "birthYear": 2000,
+    "education": {
+      "currentSchool": "Da Nang University",
+      "major": "edu",
+      "currentSchoolYear": "senior",
+      "latestGPA": 3.9
+    },
+    "occupation": {
+      "employmentStatus": "self-employed",
+      "companyName": "Freelance Tutor",
+      "position": "Tutor",
+      "industry": "edu"
+    },
+    "mentee": {
+      "industries": ["edu", "consult"],
+      "softSkills": ["lead", "self_discovery", "teamwork"],
+      "preferredMentorGender": "female",
+      "preferredForeignMentor": false,
+      "preferredMentorType": "focus"
+    },
+    "bio": {
+      "selfIntroduction": "Dedicated to improving education and eager to learn from experienced educators.",
+      "favoriteQuote": "The best way to predict your future is to create it.",
+      "hobbies": ["Teaching", "Reading", "Traveling"],
+      "favoriteBook": "Educated by Tara Westover",
+      "favoriteMovie": "Dead Poets Society"
+    }
+  },
+  {
+    "id": "3",
+    "uuid": "abc12345-e89b-12d3-a456-426614174003",
+    "fullName": "Tran Van C",
+    "phoneNumber": "0934567890",
+    "email": "tran.vanc@example.com",
+    "gender": "male",
+    "homeTown": "HoChiMinh",
+    "currentLocation": {
+      "province": "HoChiMinh",
+      "district": "1"
+    },
+    "birthYear": 2001,
+    "education": {
+      "currentSchool": "University of Science",
+      "major": "fin_invest",
+      "currentSchoolYear": "sophomore",
+      "latestGPA": 3.7
+    },
+    "occupation": {
+      "employmentStatus": "unemployed"
+    },
+    "mentee": {
+      "industries": ["fin_invest", "sales_b2b"],
+      "softSkills": ["lead", "comm", "career_orient"],
+      "preferredMentorGender": "female",
+      "preferredForeignMentor": true,
+      "preferredMentorType": "career"
+    },
+    "bio": {
+      "selfIntroduction": "Eager to learn and grow in the finance and investment industry.",
+      "favoriteQuote": "The only limit to our realization of tomorrow is our doubts of today.",
+      "hobbies": ["Investing", "Reading", "Playing chess"],
+      "favoriteBook": "Rich Dad Poor Dad by Robert Kiyosaki",
+      "favoriteMovie": "The Wolf of Wall Street"
+    }
+  },
+  {
+    "id": "4",
+    "uuid": "abc12345-e89b-12d3-a456-426614174004",
+    "fullName": "Pham Thi D",
+    "phoneNumber": "0976543210",
+    "email": "pham.thid@example.com",
+    "gender": "female",
+    "homeTown": "ThuaThienHue",
+    "currentLocation": {
+      "province": "ThuaThienHue"
+    },
+    "birthYear": 1999,
+    "education": {
+      "currentSchool": "Hue University",
+      "major": "civil_constr",
+      "currentSchoolYear": "thesis",
+      "latestGPA": 3.6
+    },
+    "occupation": {
+      "employmentStatus": "employed",
+      "companyName": "ABC Construction",
+      "position": "Junior Engineer",
+      "industry": "civil_constr"
+    },
+    "mentee": {
+      "industries": ["civil_constr", "supply_mach"],
+      "softSkills": ["lead", "people_mgmt", "teamwork"],
+      "preferredMentorGender": "male",
+      "preferredForeignMentor": false,
+      "preferredMentorType": "focus"
+    },
+    "bio": {
+      "selfIntroduction": "Passionate about construction engineering and eager to learn from experienced professionals.",
+      "favoriteQuote": "The future belongs to those who believe in the beauty of their dreams.",
+      "hobbies": ["Hiking", "Painting", "Playing guitar"],
+      "favoriteBook": "The Lean Startup by Eric Ries",
+      "favoriteMovie": "Interstellar"
+    }
+  },
+  {
+    "id": "5",
+    "uuid": "abc12345-e89b-12d3-a456-426614174005",
+    "fullName": "Hoang Van E",
+    "phoneNumber": "0945678901",
+    "email": "hoang.vane@example.com",
+    "gender": "male",
+    "homeTown": "NamDinh",
+    "currentLocation": {
+      "province": "NamDinh"
+    },
+    "birthYear": 2003,
+    "education": {
+      "currentSchool": "Nam Dinh University",
+      "major": "marketing",
+      "currentSchoolYear": "freshman",
+      "latestGPA": 3.5
+    },
+    "occupation": {
+      "employmentStatus": "unemployed"
+    },
+    "mentee": {
+      "industries": ["marketing", "sales_b2b"],
+      "softSkills": ["comm", "career_orient", "cv_interview"],
+      "preferredMentorGender": "female",
+      "preferredForeignMentor": true,
+      "preferredMentorType": "elite"
+    },
+    "bio": {
+      "selfIntroduction": "Aspiring marketer looking to learn and grow in the field.",
+      "favoriteQuote": "Success is not the key to happiness. Happiness is the key to success.",
+      "hobbies": ["Photography", "Traveling", "Playing basketball"],
+      "favoriteBook": "Start With Why by Simon Sinek",
+      "favoriteMovie": "The Social Network"
+    }
+  },
+  {
+    "id": "6",
+    "uuid": "abc12345-e89b-12d3-a456-426614174006",
+    "fullName": "Bui Van F",
+    "phoneNumber": "0912345123",
+    "email": "bui.vanf@example.com",
+    "gender": "male",
+    "homeTown": "HaiPhong",
+    "currentLocation": {
+      "province": "HaiPhong"
+    },
+    "birthYear": 2001,
+    "education": {
+      "currentSchool": "Hai Phong University",
+      "major": "agriculture",
+      "currentSchoolYear": "senior",
+      "latestGPA": 3.4
+    },
+    "occupation": {
+      "employmentStatus": "self-employed",
+      "companyName": "Green Farming Solutions",
+      "position": "Founder",
+      "industry": "agriculture"
+    },
+    "mentee": {
+      "industries": ["agriculture", "sales_b2b"],
+      "softSkills": ["lead", "teamwork", "self_discovery"],
+      "preferredMentorGender": "male",
+      "preferredForeignMentor": true,
+      "preferredMentorType": "focus"
+    },
+    "bio": {
+      "selfIntroduction": "Dedicated to sustainable agriculture and eager to learn from experienced professionals.",
+      "favoriteQuote": "The secret of change is to focus all your energy not on fighting the old, but on building the new.",
+      "hobbies": ["Gardening", "Cooking", "Cycling"],
+      "favoriteBook": "The Omnivore's Dilemma by Michael Pollan",
+      "favoriteMovie": "The Biggest Little Farm"
+    }
+  },
+  {
+    "id": "7",
+    "uuid": "abc12345-e89b-12d3-a456-426614174007",
+    "fullName": "Vu Thi G",
+    "phoneNumber": "0987654322",
+    "email": "vu.thig@example.com",
+    "gender": "female",
+    "homeTown": "NhaTrang",
+    "currentLocation": {
+      "province": "NhaTrang"
+    },
+    "birthYear": 2000,
+    "education": {
+      "currentSchool": "Nha Trang University",
+      "major": "biotech",
+      "currentSchoolYear": "junior",
+      "latestGPA": 3.7
+    },
+    "occupation": {
+      "employmentStatus": "intern",
+      "companyName": "Biotech Innovations",
+      "position": "Research Intern",
+      "industry": "biotech"
+    },
+    "mentee": {
+      "industries": ["biotech", "edu"],
+      "softSkills": ["comm", "research", "teamwork"],
+      "preferredMentorGender": "female",
+      "preferredForeignMentor": false,
+      "preferredMentorType": "career"
+    },
+    "bio": {
+      "selfIntroduction": "Aspiring biotechnologist passionate about research and innovation.",
+      "favoriteQuote": "Science is not only a disciple of reason but also one of romance and passion.",
+      "hobbies": ["Researching", "Reading scientific journals", "Swimming"],
+      "favoriteBook": "The Gene by Siddhartha Mukherjee",
+      "favoriteMovie": "Gattaca"
+    }
+  },
+  {
+    "id": "8",
+    "uuid": "abc12345-e89b-12d3-a456-426614174008",
+    "fullName": "Do Van H",
+    "phoneNumber": "0934567891",
+    "email": "do.vanh@example.com",
+    "gender": "male",
+    "homeTown": "CanTho",
+    "currentLocation": {
+      "province": "CanTho"
+    },
+    "birthYear": 1998,
+    "education": {
+      "currentSchool": "Can Tho University",
+      "major": "hospitality",
+      "currentSchoolYear": "graduate",
+      "latestGPA": 3.5
+    },
+    "occupation": {
+      "employmentStatus": "employed",
+      "companyName": "Luxury Hotels Group",
+      "position": "Front Desk Manager",
+      "industry": "hospitality"
+    },
+    "mentee": {
+      "industries": ["hospitality", "marketing"],
+      "softSkills": ["people_mgmt", "comm", "teamwork"],
+      "preferredMentorGender": "male",
+      "preferredForeignMentor": true,
+      "preferredMentorType": "focus"
+    },
+    "bio": {
+      "selfIntroduction": "Passionate about hospitality management and eager to learn from industry leaders.",
+      "favoriteQuote": "Hospitality is simply an opportunity to show love and care.",
+      "hobbies": ["Traveling", "Cooking", "Photography"],
+      "favoriteBook": "Setting the Table by Danny Meyer",
+      "favoriteMovie": "The Grand Budapest Hotel"
+    }
+  },
+  {
+    "id": "9",
+    "uuid": "abc12345-e89b-12d3-a456-426614174009",
+    "fullName": "Tran Thi I",
+    "phoneNumber": "0976543212",
+    "email": "tran.thii@example.com",
+    "gender": "female",
+    "homeTown": "QuangNinh",
+    "currentLocation": {
+      "province": "QuangNinh"
+    },
+    "birthYear": 2002,
+    "education": {
+      "currentSchool": "Quang Ninh University",
+      "major": "env_sci",
+      "currentSchoolYear": "sophomore",
+      "latestGPA": 3.9
+    },
+    "occupation": {
+      "employmentStatus": "unemployed"
+    },
+    "mentee": {
+      "industries": ["env_sci", "consult"],
+      "softSkills": ["research", "teamwork", "self_discovery"],
+      "preferredMentorGender": "female",
+      "preferredForeignMentor": false,
+      "preferredMentorType": "career"
+    },
+    "bio": {
+      "selfIntroduction": "Eager to make a positive impact on the environment through scientific research.",
+      "favoriteQuote": "The Earth does not belong to us: we belong to the Earth.",
+      "hobbies": ["Hiking", "Reading", "Volunteering"],
+      "favoriteBook": "Silent Spring by Rachel Carson",
+      "favoriteMovie": "An Inconvenient Truth"
+    }
+  },
+  {
+    "id": "10",
+    "uuid": "abc12345-e89b-12d3-a456-426614174010",
+    "fullName": "Nguyen Van J",
+    "phoneNumber": "0945678902",
+    "email": "nguyen.vanj@example.com",
+    "gender": "male",
+    "homeTown": "ThanhHoa",
+    "currentLocation": {
+      "province": "ThanhHoa"
+    },
+    "birthYear": 2003,
+    "education": {
+      "currentSchool": "Thanh Hoa University",
+      "major": "medicine",
+      "currentSchoolYear": "freshman",
+      "latestGPA": 3.6
+    },
+    "occupation": {
+      "employmentStatus": "unemployed"
+    },
+    "mentee": {
+      "industries": ["medicine", "edu"],
+      "softSkills": ["research", "comm", "teamwork"],
+      "preferredMentorGender": "male",
+      "preferredForeignMentor": true,
+      "preferredMentorType": "elite"
+    },
+    "bio": {
+      "selfIntroduction": "Aspiring doctor passionate about medicine and eager to learn from experienced professionals.",
+      "favoriteQuote": "The good physician treats the disease; the great physician treats the patient who has the disease.",
+      "hobbies": ["Reading", "Playing football", "Volunteering"],
+      "favoriteBook": "Being Mortal by Atul Gawande",
+      "favoriteMovie": "Patch Adams"
+    }
+  },
+  {
+    "id": "11",
+    "uuid": "abc12345-e89b-12d3-a456-426614174011",
+    "fullName": "Pham Thi K",
+    "phoneNumber": "0912345678",
+    "email": "pham.thik@example.com",
+    "gender": "female",
+    "homeTown": "DaNang",
+    "currentLocation": {
+      "province": "DaNang"
+    },
+    "birthYear": 1999,
+    "education": {
+      "currentSchool": "Da Nang University",
+      "major": "IT",
+      "currentSchoolYear": "graduate",
+      "latestGPA": 3.8
+    },
+    "occupation": {
+      "employmentStatus": "self-employed",
+      "companyName": "Tech Solutions",
+      "position": "Founder",
+      "industry": "IT"
+    },
+    "mentee": {
+      "industries": ["IT", "edu"],
+      "softSkills": ["lead", "teamwork", "self_discovery"],
+      "preferredMentorGender": "female",
+      "preferredForeignMentor": true,
+      "preferredMentorType": "elite"
+    },
+    "bio": {
+      "selfIntroduction": "Tech enthusiast aiming to innovate and solve real-world problems.",
+      "favoriteQuote": "Innovation distinguishes between a leader and a follower.",
+      "hobbies": ["Coding", "Reading", "Gaming"],
+      "favoriteBook": "The Lean Startup by Eric Ries",
+      "favoriteMovie": "The Social Network"
+    }
+  },
+  {
+    "id": "12",
+    "uuid": "abc12345-e89b-12d3-a456-426614174012",
+    "fullName": "Nguyen Van L",
+    "phoneNumber": "0987654321",
+    "email": "nguyen.vanl@example.com",
+    "gender": "male",
+    "homeTown": "Hue",
+    "currentLocation": {
+      "province": "Hue"
+    },
+    "birthYear": 1997,
+    "education": {
+      "currentSchool": "Hue University",
+      "major": "arts",
+      "currentSchoolYear": "graduate",
+      "latestGPA": 3.5
+    },
+    "occupation": {
+      "employmentStatus": "employed",
+      "companyName": "Creative Arts Studio",
+      "position": "Graphic Designer",
+      "industry": "arts"
+    },
+    "mentee": {
+      "industries": ["arts", "design"],
+      "softSkills": ["creativity", "teamwork", "self_discovery"],
+      "preferredMentorGender": "male",
+      "preferredForeignMentor": false,
+      "preferredMentorType": "focus"
+    },
+    "bio": {
+      "selfIntroduction": "Passionate graphic designer focused on visual storytelling.",
+      "favoriteQuote": "Art is not what you see, but what you make others see.",
+      "hobbies": ["Drawing", "Photography", "Traveling"],
+      "favoriteBook": "Steal Like an Artist by Austin Kleon",
+      "favoriteMovie": "The Secret Life of Walter Mitty"
+    }
+  },
+  {
+    "id": "13",
+    "uuid": "abc12345-e89b-12d3-a456-426614174013",
+    "fullName": "Tran Thi M",
+    "phoneNumber": "0934567890",
+    "email": "tran.thim@example.com",
+    "gender": "female",
+    "homeTown": "BienHoa",
+    "currentLocation": {
+      "province": "BienHoa"
+    },
+    "birthYear": 2000,
+    "education": {
+      "currentSchool": "Bien Hoa University",
+      "major": "marketing",
+      "currentSchoolYear": "senior",
+      "latestGPA": 3.9
+    },
+    "occupation": {
+      "employmentStatus": "intern",
+      "companyName": "Market Leaders",
+      "position": "Marketing Intern",
+      "industry": "marketing"
+    },
+    "mentee": {
+      "industries": ["marketing", "sales"],
+      "softSkills": ["comm", "lead", "teamwork"],
+      "preferredMentorGender": "female",
+      "preferredForeignMentor": false,
+      "preferredMentorType": "career"
+    },
+    "bio": {
+      "selfIntroduction": "Aspiring marketer with a passion for consumer behavior and brand strategy.",
+      "favoriteQuote": "Marketing is no longer about the stuff you make, but the stories you tell.",
+      "hobbies": ["Reading", "Writing", "Traveling"],
+      "favoriteBook": "Contagious by Jonah Berger",
+      "favoriteMovie": "The Social Network"
+    }
+  },
+  {
+    "id": "14",
+    "uuid": "abc12345-e89b-12d3-a456-426614174014",
+    "fullName": "Le Van N",
+    "phoneNumber": "0976543210",
+    "email": "le.vann@example.com",
+    "gender": "male",
+    "homeTown": "HaLong",
+    "currentLocation": {
+      "province": "HaLong"
+    },
+    "birthYear": 2002,
+    "education": {
+      "currentSchool": "Ha Long University",
+      "major": "tourism",
+      "currentSchoolYear": "junior",
+      "latestGPA": 3.6
+    },
+    "occupation": {
+      "employmentStatus": "unemployed"
+    },
+    "mentee": {
+      "industries": ["tourism", "hospitality"],
+      "softSkills": ["teamwork", "lead", "comm"],
+      "preferredMentorGender": "male",
+      "preferredForeignMentor": true,
+      "preferredMentorType": "focus"
+    },
+    "bio": {
+      "selfIntroduction": "Enthusiastic about tourism and hospitality, aiming to create memorable experiences.",
+      "favoriteQuote": "Travel makes one modest. You see what a tiny place you occupy in the world.",
+      "hobbies": ["Traveling", "Photography", "Cooking"],
+      "favoriteBook": "Into the Wild by Jon Krakauer",
+      "favoriteMovie": "The Secret Life of Walter Mitty"
+    }
+  },
+  {
+    "id": "15",
+    "uuid": "abc12345-e89b-12d3-a456-426614174015",
+    "fullName": "Do Thi O",
+    "phoneNumber": "0912345679",
+    "email": "do.thio@example.com",
+    "gender": "female",
+    "homeTown": "NamDinh",
+    "currentLocation": {
+      "province": "NamDinh"
+    },
+    "birthYear": 1998,
+    "education": {
+      "currentSchool": "Nam Dinh University",
+      "major": "finance",
+      "currentSchoolYear": "graduate",
+      "latestGPA": 3.7
+    },
+    "occupation": {
+      "employmentStatus": "employed",
+      "companyName": "Finance Experts Ltd.",
+      "position": "Financial Analyst",
+      "industry": "finance"
+    },
+    "mentee": {
+      "industries": ["finance", "consult"],
+      "softSkills": ["analysis", "teamwork", "comm"],
+      "preferredMentorGender": "female",
+      "preferredForeignMentor": false,
+      "preferredMentorType": "career"
+    },
+    "bio": {
+      "selfIntroduction": "Dedicated financial analyst with a knack for market trends and investment strategies.",
+      "favoriteQuote": "An investment in knowledge pays the best interest.",
+      "hobbies": ["Reading", "Traveling", "Cooking"],
+      "favoriteBook": "The Intelligent Investor by Benjamin Graham",
+      "favoriteMovie": "The Big Short"
+    }
+  },
+  {
+    "id": "16",
+    "uuid": "abc12345-e89b-12d3-a456-426614174016",
+    "fullName": "Vu Van P",
+    "phoneNumber": "0987654322",
+    "email": "vu.vanp@example.com",
+    "gender": "male",
+    "homeTown": "VungTau",
+    "currentLocation": {
+      "province": "VungTau"
+    },
+    "birthYear": 2001,
+    "education": {
+      "currentSchool": "Vung Tau University",
+      "major": "maritime",
+      "currentSchoolYear": "senior",
+      "latestGPA": 3.4
+    },
+    "occupation": {
+      "employmentStatus": "intern",
+      "companyName": "Oceanic Ventures",
+      "position": "Marine Intern",
+      "industry": "maritime"
+    },
+    "mentee": {
+      "industries": ["maritime", "transport"],
+      "softSkills": ["teamwork", "lead", "self_discovery"],
+      "preferredMentorGender": "male",
+      "preferredForeignMentor": true,
+      "preferredMentorType": "focus"
+    },
+    "bio": {
+      "selfIntroduction": "Aspiring maritime professional with a deep interest in ocean exploration.",
+      "favoriteQuote": "The sea, once it casts its spell, holds one in its net of wonder forever.",
+      "hobbies": ["Sailing", "Swimming", "Reading"],
+      "favoriteBook": "In the Heart of the Sea by Nathaniel Philbrick",
+      "favoriteMovie": "Life of Pi"
+    }
+  },
+  {
+    "id": "17",
+    "uuid": "abc12345-e89b-12d3-a456-426614174017",
+    "fullName": "Hoang Thi Q",
+    "phoneNumber": "0934567891",
+    "email": "hoang.thiq@example.com",
+    "gender": "female",
+    "homeTown": "CanTho",
+    "currentLocation": {
+      "province": "CanTho"
+    },
+    "birthYear": 1999,
+    "education": {
+      "currentSchool": "Can Tho University",
+      "major": "env_sci",
+      "currentSchoolYear": "graduate",
+      "latestGPA": 3.9
+    },
+    "occupation": {
+      "employmentStatus": "unemployed"
+    },
+    "mentee": {
+      "industries": ["env_sci", "research"],
+      "softSkills": ["analysis", "teamwork", "comm"],
+      "preferredMentorGender": "female",
+      "preferredForeignMentor": false,
+      "preferredMentorType": "career"
+    },
+    "bio": {
+      "selfIntroduction": "Passionate about environmental science and sustainability.",
+      "favoriteQuote": "The Earth is what we all have in common.",
+      "hobbies": ["Hiking", "Gardening", "Reading"],
+      "favoriteBook": "Silent Spring by Rachel Carson",
+      "favoriteMovie": "An Inconvenient Truth"
+    }
+  },
+  {
+    "id": "18",
+    "uuid": "abc12345-e89b-12d3-a456-426614174018",
+    "fullName": "Pham Van R",
+    "phoneNumber": "0976543211",
+    "email": "pham.vanr@example.com",
+    "gender": "male",
+    "homeTown": "DongNai",
+    "currentLocation": {
+      "province": "DongNai"
+    },
+    "birthYear": 2000,
+    "education": {
+      "currentSchool": "Dong Nai University",
+      "major": "mech_eng",
+      "currentSchoolYear": "senior",
+      "latestGPA": 3.8
+    },
+    "occupation": {
+      "employmentStatus": "employed",
+      "companyName": "Tech Innovations",
+      "position": "Mechanical Engineer",
+      "industry": "mech_eng"
+    },
+    "mentee": {
+      "industries": ["mech_eng", "manufacturing"],
+      "softSkills": ["analysis", "teamwork", "comm"],
+      "preferredMentorGender": "male",
+      "preferredForeignMentor": true,
+      "preferredMentorType": "focus"
+    },
+    "bio": {
+      "selfIntroduction": "Dedicated mechanical engineer eager to contribute to technological advancements.",
+      "favoriteQuote": "Engineering is the art of directing the great sources of power in nature for the use and convenience of man.",
+      "hobbies": ["Reading", "Hiking", "Cycling"],
+      "favoriteBook": "The Wright Brothers by David McCullough",
+      "favoriteMovie": "The Martian"
+    }
+  },
+  {
+    "id": "19",
+    "uuid": "abc12345-e89b-12d3-a456-426614174019",
+    "fullName": "Tran Thi S",
+    "phoneNumber": "0945678902",
+    "email": "tran.this@example.com",
+    "gender": "female",
+    "homeTown": "ThanhHoa",
+    "currentLocation": {
+      "province": "ThanhHoa"
+    },
+    "birthYear": 1998,
+    "education": {
+      "currentSchool": "Thanh Hoa University",
+      "major": "education",
+      "currentSchoolYear": "graduate",
+      "latestGPA": 3.6
+    },
+    "occupation": {
+      "employmentStatus": "unemployed"
+    },
+    "mentee": {
+      "industries": ["education", "research"],
+      "softSkills": ["comm", "lead", "teamwork"],
+      "preferredMentorGender": "female",
+      "preferredForeignMentor": false,
+      "preferredMentorType": "career"
+    },
+    "bio": {
+      "selfIntroduction": "Aspiring educator focused on innovative teaching methods and student engagement.",
+      "favoriteQuote": "Education is the most powerful weapon which you can use to change the world.",
+      "hobbies": ["Reading", "Writing", "Traveling"],
+      "favoriteBook": "Educated by Tara Westover",
+      "favoriteMovie": "Dead Poets Society"
+    }
+  },
+  {
+    "id": "20",
+    "uuid": "abc12345-e89b-12d3-a456-426614174020",
+    "fullName": "Le Van T",
+    "phoneNumber": "0912345680",
+    "email": "le.vant@example.com",
+    "gender": "male",
+    "homeTown": "Hue",
+    "currentLocation": {
+      "province": "Hue"
+    },
+    "birthYear": 2001,
+    "education": {
+      "currentSchool": "Hue University",
+      "major": "IT",
+      "currentSchoolYear": "junior",
+      "latestGPA": 3.8
+    },
+    "occupation": {
+      "employmentStatus": "intern",
+      "companyName": "Hue Tech",
+      "position": "Software Development Intern",
+      "industry": "IT"
+    },
+    "mentee": {
+      "industries": ["IT", "software"],
+      "softSkills": ["coding", "teamwork", "analysis"],
+      "preferredMentorGender": "male",
+      "preferredForeignMentor": true,
+      "preferredMentorType": "focus"
+    },
+    "bio": {
+      "selfIntroduction": "Passionate about software development and eager to learn from experienced mentors.",
+      "favoriteQuote": "Code is like humor. When you have to explain it, it’s bad.",
+      "hobbies": ["Coding", "Gaming", "Reading"],
+      "favoriteBook": "Clean Code by Robert C. Martin",
+      "favoriteMovie": "The Matrix"
+    }
+  },
+  {
+    "id": "21",
+    "uuid": "abc12345-e89b-12d3-a456-426614174021",
+    "fullName": "Nguyen Van U",
+    "phoneNumber": "0912345681",
+    "email": "nguyen.vanu@example.com",
+    "gender": "male",
+    "homeTown": "HaiPhong",
+    "currentLocation": {
+      "province": "HaiPhong"
+    },
+    "birthYear": 2000,
+    "education": {
+      "currentSchool": "Hai Phong University",
+      "major": "business",
+      "currentSchoolYear": "senior",
+      "latestGPA": 3.7
+    },
+    "occupation": {
+      "employmentStatus": "self-employed",
+      "companyName": "Startup Co.",
+      "position": "Founder",
+      "industry": "business"
+    },
+    "mentee": {
+      "industries": ["business", "entrepreneurship"],
+      "softSkills": ["lead", "teamwork", "comm"],
+      "preferredMentorGender": "male",
+      "preferredForeignMentor": true,
+      "preferredMentorType": "elite"
+    },
+    "bio": {
+      "selfIntroduction": "Aspiring entrepreneur with a passion for innovative business solutions.",
+      "favoriteQuote": "The best way to predict the future is to create it.",
+      "hobbies": ["Reading", "Traveling", "Gaming"],
+      "favoriteBook": "Zero to One by Peter Thiel",
+      "favoriteMovie": "The Social Network"
+    }
+  },
+  {
+    "id": "22",
+    "uuid": "abc12345-e89b-12d3-a456-426614174022",
+    "fullName": "Tran Thi V",
+    "phoneNumber": "0987654323",
+    "email": "tran.thiv@example.com",
+    "gender": "female",
+    "homeTown": "QuangNinh",
+    "currentLocation": {
+      "province": "QuangNinh"
+    },
+    "birthYear": 1999,
+    "education": {
+      "currentSchool": "Quang Ninh University",
+      "major": "edu",
+      "currentSchoolYear": "graduate",
+      "latestGPA": 3.9
+    },
+    "occupation": {
+      "employmentStatus": "unemployed"
+    },
+    "mentee": {
+      "industries": ["edu", "research"],
+      "softSkills": ["comm", "teamwork", "analysis"],
+      "preferredMentorGender": "female",
+      "preferredForeignMentor": false,
+      "preferredMentorType": "career"
+    },
+    "bio": {
+      "selfIntroduction": "Passionate about education and lifelong learning.",
+      "favoriteQuote": "Education is the key to unlock the golden door of freedom.",
+      "hobbies": ["Reading", "Writing", "Traveling"],
+      "favoriteBook": "The Art of Learning by Josh Waitzkin",
+      "favoriteMovie": "Dead Poets Society"
+    }
+  },
+  {
+    "id": "23",
+    "uuid": "abc12345-e89b-12d3-a456-426614174023",
+    "fullName": "Hoang Van W",
+    "phoneNumber": "0934567892",
+    "email": "hoang.vanw@example.com",
+    "gender": "male",
+    "homeTown": "NgheAn",
+    "currentLocation": {
+      "province": "NgheAn"
+    },
+    "birthYear": 2001,
+    "education": {
+      "currentSchool": "Nghe An University",
+      "major": "law",
+      "currentSchoolYear": "junior",
+      "latestGPA": 3.6
+    },
+    "occupation": {
+      "employmentStatus": "intern",
+      "companyName": "Law Partners",
+      "position": "Legal Intern",
+      "industry": "law"
+    },
+    "mentee": {
+      "industries": ["law", "legal"],
+      "softSkills": ["comm", "analysis", "teamwork"],
+      "preferredMentorGender": "male",
+      "preferredForeignMentor": false,
+      "preferredMentorType": "focus"
+    },
+    "bio": {
+      "selfIntroduction": "Aspiring lawyer with a strong sense of justice and ethics.",
+      "favoriteQuote": "Justice delayed is justice denied.",
+      "hobbies": ["Reading", "Writing", "Debating"],
+      "favoriteBook": "To Kill a Mockingbird by Harper Lee",
+      "favoriteMovie": "A Few Good Men"
+    }
+  },
+  {
+    "id": "24",
+    "uuid": "abc12345-e89b-12d3-a456-426614174024",
+    "fullName": "Pham Thi X",
+    "phoneNumber": "0976543212",
+    "email": "pham.thix@example.com",
+    "gender": "female",
+    "homeTown": "DakLak",
+    "currentLocation": {
+      "province": "DakLak"
+    },
+    "birthYear": 1998,
+    "education": {
+      "currentSchool": "Dak Lak University",
+      "major": "agriculture",
+      "currentSchoolYear": "graduate",
+      "latestGPA": 3.8
+    },
+    "occupation": {
+      "employmentStatus": "unemployed"
+    },
+    "mentee": {
+      "industries": ["agriculture", "research"],
+      "softSkills": ["analysis", "teamwork", "comm"],
+      "preferredMentorGender": "female",
+      "preferredForeignMentor": true,
+      "preferredMentorType": "career"
+    },
+    "bio": {
+      "selfIntroduction": "Dedicated to sustainable agriculture and rural development.",
+      "favoriteQuote": "The future of agriculture lies in our hands.",
+      "hobbies": ["Gardening", "Reading", "Cooking"],
+      "favoriteBook": "The Omnivore's Dilemma by Michael Pollan",
+      "favoriteMovie": "Food, Inc."
+    }
+  },
+  {
+    "id": "25",
+    "uuid": "abc12345-e89b-12d3-a456-426614174025",
+    "fullName": "Le Van Y",
+    "phoneNumber": "0912345683",
+    "email": "le.vany@example.com",
+    "gender": "male",
+    "homeTown": "VinhLong",
+    "currentLocation": {
+      "province": "VinhLong"
+    },
+    "birthYear": 1999,
+    "education": {
+      "currentSchool": "Vinh Long University",
+      "major": "medicine",
+      "currentSchoolYear": "graduate",
+      "latestGPA": 3.9
+    },
+    "occupation": {
+      "employmentStatus": "self-employed",
+      "companyName": "Wellness Clinic",
+      "position": "Founder",
+      "industry": "medicine"
+    },
+    "mentee": {
+      "industries": ["medicine", "healthcare"],
+      "softSkills": ["teamwork", "comm", "lead"],
+      "preferredMentorGender": "male",
+      "preferredForeignMentor": true,
+      "preferredMentorType": "elite"
+    },
+    "bio": {
+      "selfIntroduction": "Aspiring healthcare professional committed to holistic wellness.",
+      "favoriteQuote": "To keep the body in good health is a duty... otherwise we shall not be able to keep our mind strong and clear.",
+      "hobbies": ["Reading", "Yoga", "Cooking"],
+      "favoriteBook": "Being Mortal by Atul Gawande",
+      "favoriteMovie": "Patch Adams"
+    }
+  },
+  {
+    "id": "26",
+    "uuid": "abc12345-e89b-12d3-a456-426614174026",
+    "fullName": "Tran Thi Z",
+    "phoneNumber": "0987654324",
+    "email": "tran.thiz@example.com",
+    "gender": "female",
+    "homeTown": "SocTrang",
+    "currentLocation": {
+      "province": "SocTrang"
+    },
+    "birthYear": 2000,
+    "education": {
+      "currentSchool": "Soc Trang University",
+      "major": "arts",
+      "currentSchoolYear": "senior",
+      "latestGPA": 3.5
+    },
+    "occupation": {
+      "employmentStatus": "intern",
+      "companyName": "Art Studio",
+      "position": "Art Intern",
+      "industry": "arts"
+    },
+    "mentee": {
+      "industries": ["arts", "design"],
+      "softSkills": ["creativity", "teamwork", "comm"],
+      "preferredMentorGender": "female",
+      "preferredForeignMentor": false,
+      "preferredMentorType": "career"
+    },
+    "bio": {
+      "selfIntroduction": "Creative artist passionate about visual storytelling and design.",
+      "favoriteQuote": "Art speaks where words are unable to explain.",
+      "hobbies": ["Drawing", "Photography", "Traveling"],
+      "favoriteBook": "The Artist's Way by Julia Cameron",
+      "favoriteMovie": "The Secret Life of Walter Mitty"
+    }
+  },
+  {
+    "id": "27",
+    "uuid": "abc12345-e89b-12d3-a456-426614174027",
+    "fullName": "Hoang Van AA",
+    "phoneNumber": "0934567893",
+    "email": "hoang.vanaa@example.com",
+    "gender": "male",
+    "homeTown": "NinhBinh",
+    "currentLocation": {
+      "province": "NinhBinh"
+    },
+    "birthYear": 2002,
+    "education": {
+      "currentSchool": "Ninh Binh University",
+      "major": "chem_eng",
+      "currentSchoolYear": "junior",
+      "latestGPA": 3.7
+    },
+    "occupation": {
+      "employmentStatus": "intern",
+      "companyName": "Chemical Solutions",
+      "position": "Chemical Engineering Intern",
+      "industry": "chem_eng"
+    },
+    "mentee": {
+      "industries": ["chem_eng", "research"],
+      "softSkills": ["analysis", "teamwork", "comm"],
+      "preferredMentorGender": "male",
+      "preferredForeignMentor": true,
+      "preferredMentorType": "focus"
+    },
+    "bio": {
+      "selfIntroduction": "Dedicated to chemical engineering and innovative solutions.",
+      "favoriteQuote": "Chemistry is the study of transformation.",
+      "hobbies": ["Reading", "Cycling", "Cooking"],
+      "favoriteBook": "The Disappearing Spoon by Sam Kean",
+      "favoriteMovie": "The Theory of Everything"
+    }
+  },
+  {
+    "id": "28",
+    "uuid": "abc12345-e89b-12d3-a456-426614174028",
+    "fullName": "Pham Thi BB",
+    "phoneNumber": "0976543213",
+    "email": "pham.thibb@example.com",
+    "gender": "female",
+    "homeTown": "CaMau",
+    "currentLocation": {
+      "province": "CaMau"
+    },
+    "birthYear": 1998,
+    "education": {
+      "currentSchool": "Ca Mau University",
+      "major": "tourism",
+      "currentSchoolYear": "graduate",
+      "latestGPA": 3.8
+    },
+    "occupation": {
+      "employmentStatus": "self-employed",
+      "companyName": "Travel Agency",
+      "position": "Founder",
+      "industry": "tourism"
+    },
+    "mentee": {
+      "industries": ["tourism", "hospitality"],
+      "softSkills": ["comm", "lead", "teamwork"],
+      "preferredMentorGender": "female",
+      "preferredForeignMentor": false,
+      "preferredMentorType": "elite"
+    },
+    "bio": {
+      "selfIntroduction": "Passionate about travel and creating unforgettable experiences.",
+      "favoriteQuote": "Travel is the only thing you buy that makes you richer.",
+      "hobbies": ["Traveling", "Photography", "Reading"],
+      "favoriteBook": "Vagabonding by Rolf Potts",
+      "favoriteMovie": "Into the Wild"
+    }
+  },
+  {
+    "id": "29",
+    "uuid": "abc12345-e89b-12d3-a456-426614174029",
+    "fullName": "Nguyen Van CC",
+    "phoneNumber": "0912345684",
+    "email": "nguyen.vancc@example.com",
+    "gender": "male",
+    "homeTown": "BenTre",
+    "currentLocation": {
+      "province": "BenTre"
+    },
+    "birthYear": 2001,
+    "education": {
+      "currentSchool": "Ben Tre University",
+      "major": "physics",
+      "currentSchoolYear": "junior",
+      "latestGPA": 3.9
+    },
+    "occupation": {
+      "employmentStatus": "intern",
+      "companyName": "Physics Lab",
+      "position": "Research Intern",
+      "industry": "physics"
+    },
+    "mentee": {
+      "industries": ["physics", "research"],
+      "softSkills": ["analysis", "teamwork", "comm"],
+      "preferredMentorGender": "male",
+      "preferredForeignMentor": true,
+      "preferredMentorType": "focus"
+    },
+    "bio": {
+      "selfIntroduction": "Aspiring physicist eager to contribute to scientific discoveries.",
+      "favoriteQuote": "The important thing is not to stop questioning.",
+      "hobbies": ["Reading", "Cycling", "Gaming"],
+      "favoriteBook": "A Brief History of Time by Stephen Hawking",
+      "favoriteMovie": "Interstellar"
+    }
+  },
+  {
+    "id": "30",
+    "uuid": "abc12345-e89b-12d3-a456-426614174030",
+    "fullName": "Tran Thi DD",
+    "phoneNumber": "0987654325",
+    "email": "tran.thidd@example.com",
+    "gender": "female",
+    "homeTown": "KienGiang",
+    "currentLocation": {
+      "province": "KienGiang"
+    },
+    "birthYear": 2000,
+    "education": {
+      "currentSchool": "Kien Giang University",
+      "major": "law",
+      "currentSchoolYear": "senior",
+      "latestGPA": 3.7
+    },
+    "occupation": {
+      "employmentStatus": "unemployed"
+    },
+    "mentee": {
+      "industries": ["law", "legal"],
+      "softSkills": ["comm", "analysis", "teamwork"],
+      "preferredMentorGender": "female",
+      "preferredForeignMentor": true,
+      "preferredMentorType": "career"
+    },
+    "bio": {
+      "selfIntroduction": "Dedicated to the study of law and justice.",
+      "favoriteQuote": "Injustice anywhere is a threat to justice everywhere.",
+      "hobbies": ["Reading", "Writing", "Traveling"],
+      "favoriteBook": "Just Mercy by Bryan Stevenson",
+      "favoriteMovie": "A Time to Kill"
+    }
+  },
+  {
+    "id": "31",
+    "uuid": "abc12345-e89b-12d3-a456-426614174031",
+    "fullName": "Le Van EE",
+    "phoneNumber": "0912345685",
+    "email": "le.vanee@example.com",
+    "gender": "male",
+    "homeTown": "TayNinh",
+    "currentLocation": {
+      "province": "TayNinh"
+    },
+    "birthYear": 1999,
+    "education": {
+      "currentSchool": "Tay Ninh University",
+      "major": "chem_eng",
+      "currentSchoolYear": "graduate",
+      "latestGPA": 3.9
+    },
+    "occupation": {
+      "employmentStatus": "self-employed",
+      "companyName": "Chemical Innovations",
+      "position": "Founder",
+      "industry": "chem_eng"
+    },
+    "mentee": {
+      "industries": ["chem_eng", "research"],
+      "softSkills": ["analysis", "teamwork", "comm"],
+      "preferredMentorGender": "male",
+      "preferredForeignMentor": true,
+      "preferredMentorType": "elite"
+    },
+    "bio": {
+      "selfIntroduction": "Dedicated to chemical engineering and innovative solutions.",
+      "favoriteQuote": "Chemistry is the study of transformation.",
+      "hobbies": ["Reading", "Cycling", "Cooking"],
+      "favoriteBook": "The Disappearing Spoon by Sam Kean",
+      "favoriteMovie": "The Theory of Everything"
+    }
+  },
+  {
+    "id": "32",
+    "uuid": "abc12345-e89b-12d3-a456-426614174032",
+    "fullName": "Nguyen Thi FF",
+    "phoneNumber": "0987654326",
+    "email": "nguyen.thiff@example.com",
+    "gender": "female",
+    "homeTown": "VinhPhuc",
+    "currentLocation": {
+      "province": "VinhPhuc"
+    },
+    "birthYear": 2002,
+    "education": {
+      "currentSchool": "Vinh Phuc University",
+      "major": "philosophy",
+      "currentSchoolYear": "junior",
+      "latestGPA": 3.7
+    },
+    "occupation": {
+      "employmentStatus": "intern",
+      "companyName": "Philosophy Institute",
+      "position": "Research Intern",
+      "industry": "philosophy"
+    },
+    "mentee": {
+      "industries": ["philosophy", "research"],
+      "softSkills": ["analysis", "comm", "teamwork"],
+      "preferredMentorGender": "female",
+      "preferredForeignMentor": false,
+      "preferredMentorType": "focus"
+    },
+    "bio": {
+      "selfIntroduction": "Aspiring philosopher with a passion for deep thinking and analysis.",
+      "favoriteQuote": "The unexamined life is not worth living.",
+      "hobbies": ["Reading", "Writing", "Debating"],
+      "favoriteBook": "The Republic by Plato",
+      "favoriteMovie": "The Matrix"
+    }
+  },
+  {
+    "id": "33",
+    "uuid": "abc12345-e89b-12d3-a456-426614174033",
+    "fullName": "Hoang Van GG",
+    "phoneNumber": "0934567894",
+    "email": "hoang.vangg@example.com",
+    "gender": "male",
+    "homeTown": "AnGiang",
+    "currentLocation": {
+      "province": "AnGiang"
+    },
+    "birthYear": 2000,
+    "education": {
+      "currentSchool": "An Giang University",
+      "major": "econ",
+      "currentSchoolYear": "senior",
+      "latestGPA": 3.8
+    },
+    "occupation": {
+      "employmentStatus": "self-employed",
+      "companyName": "Econ Consulting",
+      "position": "Founder",
+      "industry": "econ"
+    },
+    "mentee": {
+      "industries": ["econ", "finance"],
+      "softSkills": ["analysis", "teamwork", "lead"],
+      "preferredMentorGender": "male",
+      "preferredForeignMentor": true,
+      "preferredMentorType": "elite"
+    },
+    "bio": {
+      "selfIntroduction": "Aspiring economist with a passion for financial markets and analysis.",
+      "favoriteQuote": "An investment in knowledge pays the best interest.",
+      "hobbies": ["Reading", "Investing", "Traveling"],
+      "favoriteBook": "The Intelligent Investor by Benjamin Graham",
+      "favoriteMovie": "The Big Short"
+    }
+  },
+  {
+    "id": "34",
+    "uuid": "abc12345-e89b-12d3-a456-426614174034",
+    "fullName": "Tran Thi HH",
+    "phoneNumber": "0976543214",
+    "email": "tran.thihh@example.com",
+    "gender": "female",
+    "homeTown": "BinhThuan",
+    "currentLocation": {
+      "province": "BinhThuan"
+    },
+    "birthYear": 1998,
+    "education": {
+      "currentSchool": "Binh Thuan University",
+      "major": "edu",
+      "currentSchoolYear": "graduate",
+      "latestGPA": 3.7
+    },
+    "occupation": {
+      "employmentStatus": "unemployed"
+    },
+    "mentee": {
+      "industries": ["edu", "research"],
+      "softSkills": ["comm", "teamwork", "analysis"],
+      "preferredMentorGender": "female",
+      "preferredForeignMentor": false,
+      "preferredMentorType": "career"
+    },
+    "bio": {
+      "selfIntroduction": "Passionate about education and lifelong learning.",
+      "favoriteQuote": "Education is the most powerful weapon which you can use to change the world.",
+      "hobbies": ["Reading", "Writing", "Traveling"],
+      "favoriteBook": "The Art of Learning by Josh Waitzkin",
+      "favoriteMovie": "Dead Poets Society"
+    }
+  },
+  {
+    "id": "35",
+    "uuid": "abc12345-e89b-12d3-a456-426614174035",
+    "fullName": "Nguyen Van II",
+    "phoneNumber": "0912345686",
+    "email": "nguyen.vanii@example.com",
+    "gender": "male",
+    "homeTown": "QuangTri",
+    "currentLocation": {
+      "province": "QuangTri"
+    },
+    "birthYear": 2001,
+    "education": {
+      "currentSchool": "Quang Tri University",
+      "major": "law",
+      "currentSchoolYear": "junior",
+      "latestGPA": 3.6
+    },
+    "occupation": {
+      "employmentStatus": "intern",
+      "companyName": "Law Partners",
+      "position": "Legal Intern",
+      "industry": "law"
+    },
+    "mentee": {
+      "industries": ["law", "legal"],
+      "softSkills": ["comm", "analysis", "teamwork"],
+      "preferredMentorGender": "male",
+      "preferredForeignMentor": false,
+      "preferredMentorType": "focus"
+    },
+    "bio": {
+      "selfIntroduction": "Aspiring lawyer with a strong sense of justice and ethics.",
+      "favoriteQuote": "Justice delayed is justice denied.",
+      "hobbies": ["Reading", "Writing", "Debating"],
+      "favoriteBook": "To Kill a Mockingbird by Harper Lee",
+      "favoriteMovie": "A Few Good Men"
+    }
+  },
+  {
+    "id": "36",
+    "uuid": "abc12345-e89b-12d3-a456-426614174036",
+    "fullName": "Tran Thi JJ",
+    "phoneNumber": "0987654327",
+    "email": "tran.thijj@example.com",
+    "gender": "female",
+    "homeTown": "CanTho",
+    "currentLocation": {
+      "province": "CanTho"
+    },
+    "birthYear": 2000,
+    "education": {
+      "currentSchool": "Can Tho University",
+      "major": "medicine",
+      "currentSchoolYear": "senior",
+      "latestGPA": 3.9
+    },
+    "occupation": {
+      "employmentStatus": "unemployed"
+    },
+    "mentee": {
+      "industries": ["medicine", "healthcare"],
+      "softSkills": ["teamwork", "comm", "lead"],
+      "preferredMentorGender": "female",
+      "preferredForeignMentor": true,
+      "preferredMentorType": "career"
+    },
+    "bio": {
+      "selfIntroduction": "Aspiring healthcare professional committed to holistic wellness.",
+      "favoriteQuote": "To keep the body in good health is a duty... otherwise we shall not be able to keep our mind strong and clear.",
+      "hobbies": ["Reading", "Yoga", "Cooking"],
+      "favoriteBook": "Being Mortal by Atul Gawande",
+      "favoriteMovie": "Patch Adams"
+    }
+  },
+  {
+    "id": "37",
+    "uuid": "abc12345-e89b-12d3-a456-426614174037",
+    "fullName": "Hoang Van KK",
+    "phoneNumber": "0934567895",
+    "email": "hoang.vankk@example.com",
+    "gender": "male",
+    "homeTown": "LangSon",
+    "currentLocation": {
+      "province": "LangSon"
+    },
+    "birthYear": 1999,
+    "education": {
+      "currentSchool": "Lang Son University",
+      "major": "arts",
+      "currentSchoolYear": "graduate",
+      "latestGPA": 3.8
+    },
+    "occupation": {
+      "employmentStatus": "self-employed",
+      "companyName": "Art Studio",
+      "position": "Founder",
+      "industry": "arts"
+    },
+    "mentee": {
+      "industries": ["arts", "design"],
+      "softSkills": ["creativity", "teamwork", "comm"],
+      "preferredMentorGender": "male",
+      "preferredForeignMentor": false,
+      "preferredMentorType": "elite"
+    },
+    "bio": {
+      "selfIntroduction": "Creative artist passionate about visual storytelling and design.",
+      "favoriteQuote": "Art speaks where words are unable to explain.",
+      "hobbies": ["Drawing", "Photography", "Traveling"],
+      "favoriteBook": "The Artist's Way by Julia Cameron",
+      "favoriteMovie": "The Secret Life of Walter Mitty"
+    }
+  },
+  {
+    "id": "38",
+    "uuid": "abc12345-e89b-12d3-a456-426614174038",
+    "fullName": "Pham Thi LL",
+    "phoneNumber": "0976543215",
+    "email": "pham.thill@example.com",
+    "gender": "female",
+    "homeTown": "HaGiang",
+    "currentLocation": {
+      "province": "HaGiang"
+    },
+    "birthYear": 1998,
+    "education": {
+      "currentSchool": "Ha Giang University",
+      "major": "tourism",
+      "currentSchoolYear": "graduate",
+      "latestGPA": 3.8
+    },
+    "occupation": {
+      "employmentStatus": "self-employed",
+      "companyName": "Travel Agency",
+      "position": "Founder",
+      "industry": "tourism"
+    },
+    "mentee": {
+      "industries": ["tourism", "hospitality"],
+      "softSkills": ["comm", "lead", "teamwork"],
+      "preferredMentorGender": "female",
+      "preferredForeignMentor": false,
+      "preferredMentorType": "elite"
+    },
+    "bio": {
+      "selfIntroduction": "Passionate about travel and creating unforgettable experiences.",
+      "favoriteQuote": "Travel is the only thing you buy that makes you richer.",
+      "hobbies": ["Traveling", "Photography", "Reading"],
+      "favoriteBook": "Vagabonding by Rolf Potts",
+      "favoriteMovie": "Into the Wild"
+    }
+  },
+  {
+    "id": "39",
+    "uuid": "abc12345-e89b-12d3-a456-426614174039",
+    "fullName": "Le Van MM",
+    "phoneNumber": "0912345687",
+    "email": "le.vanmm@example.com",
+    "gender": "male",
+    "homeTown": "BacLieu",
+    "currentLocation": {
+      "province": "BacLieu"
+    },
+    "birthYear": 2001,
+    "education": {
+      "currentSchool": "Bac Lieu University",
+      "major": "econ",
+      "currentSchoolYear": "junior",
+      "latestGPA": 3.9
+    },
+    "occupation": {
+      "employmentStatus": "intern",
+      "companyName": "Finance Firm",
+      "position": "Finance Intern",
+      "industry": "econ"
+    },
+    "mentee": {
+      "industries": ["econ", "finance"],
+      "softSkills": ["analysis", "teamwork", "lead"],
+      "preferredMentorGender": "male",
+      "preferredForeignMentor": true,
+      "preferredMentorType": "focus"
+    },
+    "bio": {
+      "selfIntroduction": "Aspiring economist with a passion for financial markets and analysis.",
+      "favoriteQuote": "An investment in knowledge pays the best interest.",
+      "hobbies": ["Reading", "Investing", "Traveling"],
+      "favoriteBook": "The Intelligent Investor by Benjamin Graham",
+      "favoriteMovie": "The Big Short"
+    }
+  },
+  {
+    "id": "40",
+    "uuid": "abc12345-e89b-12d3-a456-426614174040",
+    "fullName": "Nguyen Thi NN",
+    "phoneNumber": "0987654328",
+    "email": "nguyen.thinn@example.com",
+    "gender": "female",
+    "homeTown": "LaiChau",
+    "currentLocation": {
+      "province": "LaiChau"
+    },
+    "birthYear": 2002,
+    "education": {
+      "currentSchool": "Lai Chau University",
+      "major": "edu",
+      "currentSchoolYear": "junior",
+      "latestGPA": 3.7
+    },
+    "occupation": {
+      "employmentStatus": "intern",
+      "companyName": "Teaching Institute",
+      "position": "Teaching Intern",
+      "industry": "edu"
+    },
+    "mentee": {
+      "industries": ["edu", "research"],
+      "softSkills": ["comm", "teamwork", "analysis"],
+      "preferredMentorGender": "female",
+      "preferredForeignMentor": false,
+      "preferredMentorType": "focus"
+    },
+    "bio": {
+      "selfIntroduction": "Passionate about education and lifelong learning.",
+      "favoriteQuote": "Education is the most powerful weapon which you can use to change the world.",
+      "hobbies": ["Reading", "Writing", "Traveling"],
+      "favoriteBook": "The Art of Learning by Josh Waitzkin",
+      "favoriteMovie": "Dead Poets Society"
+    }
+  }
+]

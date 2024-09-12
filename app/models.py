@@ -70,3 +70,19 @@ class Mentee(BaseModel):
     mentee: MenteeDetails
     bio: Bio
     
+class MatchMentee(BaseModel):
+    menteeId: str
+    menteeName: str
+    matchRate: int
+    
+    
+class Group(BaseModel):
+    id: str
+    mentees: List[MatchMentee]
+    mentorId: str 
+    
+class Match(BaseModel):
+    uid: str
+    createdAt: str
+    matchName: str
+    groups: List[Group]

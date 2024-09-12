@@ -1,0 +1,364 @@
+[
+  {
+    "id": "1",
+    "uuid": "uuid-1",
+    "fullName": "Nguyen Van A",
+    "phoneNumber": "0123456789",
+    "email": "nguyenvana@example.com",
+    "gender": "male",
+    "homeTown": "HaNoi",
+    "currentLocation": {
+      "province": "HaNoi"
+    },
+    "birthYear": 1980,
+    "occupation": {
+      "overview": "Software Engineer with over 10 years of experience in IT industry",
+      "employmentStatus": "employed",
+      "companyName": "TechCorp",
+      "position": "Senior Developer",
+      "yearsOfExperience": 12,
+      "industry": "it_sw_ai"
+    },
+    "mentor": {
+      "type": "career",
+      "industries": ["it_sw_ai", "edu"],
+      "softSkills": ["comm", "lead", "career_orient"],
+      "preferredNumberOfMentees": 3,
+      "preferredMenteeCollegeYear": "junior",
+      "preferredMenteeGender": "female"
+    },
+    "bio": {
+      "selfIntroduction": "Passionate about technology and education, I enjoy helping students discover their potential.",
+      "favoriteQuote": "The best way to predict the future is to invent it.",
+      "hobbies": ["Reading", "Cycling"],
+      "favoriteBook": "Clean Code by Robert C. Martin",
+      "favoriteMovie": "The Matrix"
+    }
+  },
+  {
+    "id": "2",
+    "uuid": "uuid-2",
+    "fullName": "Le Thi B",
+    "phoneNumber": "0987654321",
+    "email": "lethib@example.com",
+    "gender": "female",
+    "homeTown": "HoChiMinh",
+    "currentLocation": {
+      "province": "HoChiMinh",
+      "district": "3"
+    },
+    "birthYear": 1985,
+    "occupation": {
+      "overview": "Marketing Specialist with expertise in digital marketing and social media.",
+      "employmentStatus": "self-employed",
+      "companyName": "CreativeMarketing",
+      "position": "Founder",
+      "yearsOfExperience": 8,
+      "industry": "marketing"
+    },
+    "mentor": {
+      "type": "elite",
+      "industries": ["marketing", "sales_b2b"],
+      "softSkills": ["comm", "teamwork", "self_discovery"],
+      "preferredNumberOfMentees": 5,
+      "preferredMenteeCollegeYear": "senior",
+      "preferredMenteeGender": "male"
+    },
+    "bio": {
+      "selfIntroduction": "I love working with creative minds and helping them achieve their marketing goals.",
+      "favoriteQuote": "Creativity is intelligence having fun.",
+      "hobbies": ["Traveling", "Photography"],
+      "favoriteBook": "The Lean Startup by Eric Ries",
+      "favoriteMovie": "Inception"
+    }
+  },
+  {
+    "id": "3",
+    "uuid": "uuid-3",
+    "fullName": "Tran Van C",
+    "phoneNumber": "0912345678",
+    "email": "tranvanc@example.com",
+    "gender": "male",
+    "homeTown": "DaNang",
+    "currentLocation": {
+      "province": "DaNang"
+    },
+    "birthYear": 1990,
+    "occupation": {
+      "overview": "Civil Engineer specializing in large infrastructure projects.",
+      "employmentStatus": "employed",
+      "companyName": "BuildIt",
+      "position": "Project Manager",
+      "yearsOfExperience": 10,
+      "industry": "civil_constr"
+    },
+    "mentor": {
+      "type": "focus",
+      "industries": ["civil_constr", "real_estate"],
+      "softSkills": ["lead", "people_mgmt", "cv_interview"],
+      "preferredNumberOfMentees": 2,
+      "preferredMenteeCollegeYear": "graduate",
+      "preferredMenteeGender": "female"
+    },
+    "bio": {
+      "selfIntroduction": "Engineering is my passion, and I enjoy mentoring young engineers to achieve their career goals.",
+      "favoriteQuote": "Success is where preparation and opportunity meet.",
+      "hobbies": ["Fishing", "Woodworking"],
+      "favoriteBook": "The Art of War by Sun Tzu",
+      "favoriteMovie": "Gladiator"
+    }
+  },
+  {
+    "id": "4",
+    "uuid": "uuid-4",
+    "fullName": "Pham Thi D",
+    "phoneNumber": "0934567890",
+    "email": "phamthid@example.com",
+    "gender": "female",
+    "homeTown": "HaiPhong",
+    "currentLocation": {
+      "province": "HaiPhong"
+    },
+    "birthYear": 1987,
+    "occupation": {
+      "overview": "Biotech researcher with a focus on genetic engineering.",
+      "employmentStatus": "employed",
+      "companyName": "BioTechLab",
+      "position": "Lead Scientist",
+      "yearsOfExperience": 9,
+      "industry": "biotech"
+    },
+    "mentor": {
+      "type": "career",
+      "industries": ["biotech", "consult"],
+      "softSkills": ["career_orient", "teamwork", "comm"],
+      "preferredNumberOfMentees": 4,
+      "preferredMenteeCollegeYear": "thesis",
+      "preferredMenteeGender": "male"
+    },
+    "bio": {
+      "selfIntroduction": "Dedicated to advancing science and helping others navigate their career paths in biotech.",
+      "favoriteQuote": "The important thing is not to stop questioning.",
+      "hobbies": ["Gardening", "Knitting"],
+      "favoriteBook": "The Double Helix by James Watson",
+      "favoriteMovie": "Interstellar"
+    }
+  },
+  {
+    "id": "5",
+    "uuid": "uuid-5",
+    "fullName": "Hoang Van E",
+    "phoneNumber": "0909876543",
+    "email": "hoangvane@example.com",
+    "gender": "male",
+    "homeTown": "BinhDuong",
+    "currentLocation": {
+      "province": "BinhDuong"
+    },
+    "birthYear": 1995,
+    "occupation": {
+      "overview": "HR Manager with a focus on talent acquisition and employee development.",
+      "employmentStatus": "employed",
+      "companyName": "PeopleFirst",
+      "position": "HR Manager",
+      "yearsOfExperience": 6,
+      "industry": "hr"
+    },
+    "mentor": {
+      "type": "elite",
+      "industries": ["hr", "consult"],
+      "softSkills": ["people_mgmt", "lead", "cv_interview"],
+      "preferredNumberOfMentees": 3,
+      "preferredMenteeCollegeYear": "senior",
+      "preferredMenteeGender": "female"
+    },
+    "bio": {
+      "selfIntroduction": "Committed to helping individuals grow and develop in their careers.",
+      "favoriteQuote": "The only way to do great work is to love what you do.",
+      "hobbies": ["Singing", "Jogging/Running"],
+      "favoriteBook": "The Five Dysfunctions of a Team by Patrick Lencioni",
+      "favoriteMovie": "The Pursuit of Happyness"
+    }
+  },
+  {
+    "id": "6",
+    "uuid": "123e4567-e89b-12d3-a456-426614174006",
+    "fullName": "Nguyen Minh Tri",
+    "phoneNumber": "0987654321",
+    "email": "nguyen.minhtri@example.com",
+    "gender": "male",
+    "homeTown": "BacGiang",
+    "currentLocation": {
+      "province": "HoChiMinh",
+      "district": "1"
+    },
+    "birthYear": 1989,
+    "occupation": {
+      "overview": "Senior marketing strategist with a focus on digital campaigns.",
+      "employmentStatus": "employed",
+      "companyName": "Digital Pioneers",
+      "position": "Marketing Director",
+      "yearsOfExperience": 10,
+      "industry": "marketing"
+    },
+    "mentor": {
+      "type": "focus",
+      "industries": ["marketing", "sales_b2b"],
+      "softSkills": ["lead", "comm", "teamwork"],
+      "preferredNumberOfMentees": 4,
+      "preferredMenteeCollegeYear": "junior",
+      "preferredMenteeGender": "female"
+    },
+    "bio": {
+      "selfIntroduction": "I am passionate about helping others achieve their goals in the marketing industry.",
+      "favoriteQuote": "Success is not final; failure is not fatal: It is the courage to continue that counts.",
+      "hobbies": ["Cycling", "Photography", "Reading"],
+      "favoriteBook": "Start With Why by Simon Sinek",
+      "favoriteMovie": "The Social Network"
+    }
+  },
+  {
+    "id": "7",
+    "uuid": "123e4567-e89b-12d3-a456-426614174007",
+    "fullName": "Le Thi Thu",
+    "phoneNumber": "0912345678",
+    "email": "le.thithu@example.com",
+    "gender": "female",
+    "homeTown": "HaNoi",
+    "currentLocation": {
+      "province": "HaNoi"
+    },
+    "birthYear": 1992,
+    "occupation": {
+      "overview": "Biotechnology researcher with a specialization in genetic engineering.",
+      "employmentStatus": "employed",
+      "companyName": "BioTech Innovations",
+      "position": "Research Scientist",
+      "yearsOfExperience": 7,
+      "industry": "biotech"
+    },
+    "mentor": {
+      "type": "elite",
+      "industries": ["biotech", "edu"],
+      "softSkills": ["career_orient", "self_discovery"],
+      "preferredNumberOfMentees": 2,
+      "preferredMenteeCollegeYear": "graduate",
+      "preferredMenteeGender": "male"
+    },
+    "bio": {
+      "selfIntroduction": "Eager to share my knowledge and help guide future scientists in their careers.",
+      "favoriteQuote": "The important thing is not to stop questioning. Curiosity has its own reason for existing.",
+      "hobbies": ["Writing", "Gardening", "Playing musical instruments"],
+      "favoriteBook": "The Gene: An Intimate History by Siddhartha Mukherjee",
+      "favoriteMovie": "Interstellar"
+    }
+  },
+  {
+    "id": "8",
+    "uuid": "123e4567-e89b-12d3-a456-426614174008",
+    "fullName": "Pham Van Quyen",
+    "phoneNumber": "0976543210",
+    "email": "pham.vanquyen@example.com",
+    "gender": "male",
+    "homeTown": "DaNang",
+    "currentLocation": {
+      "province": "DaNang"
+    },
+    "birthYear": 1985,
+    "occupation": {
+      "overview": "Civil engineer with extensive experience in large-scale construction projects.",
+      "employmentStatus": "self-employed",
+      "companyName": "Quyen Construction",
+      "position": "Founder & CEO",
+      "yearsOfExperience": 15,
+      "industry": "civil_constr"
+    },
+    "mentor": {
+      "type": "career",
+      "industries": ["civil_constr", "supply_mach"],
+      "softSkills": ["lead", "people_mgmt", "career_orient"],
+      "preferredNumberOfMentees": 5,
+      "preferredMenteeCollegeYear": "senior",
+      "preferredMenteeGender": "female"
+    },
+    "bio": {
+      "selfIntroduction": "With over a decade of experience in construction, I aim to guide the next generation of engineers.",
+      "favoriteQuote": "The only limit to our realization of tomorrow is our doubts of today.",
+      "hobbies": ["Fishing", "Camping", "Jogging/Running"],
+      "favoriteBook": "The Lean Startup by Eric Ries",
+      "favoriteMovie": "The Matrix"
+    }
+  },
+  {
+    "id": "9",
+    "uuid": "123e4567-e89b-12d3-a456-426614174009",
+    "fullName": "Tran Thi Kim",
+    "phoneNumber": "0908765432",
+    "email": "tran.thikim@example.com",
+    "gender": "female",
+    "homeTown": "ThuaThienHue",
+    "currentLocation": {
+      "province": "ThuaThienHue"
+    },
+    "birthYear": 1990,
+    "occupation": {
+      "overview": "Experienced educator and curriculum developer in the education sector.",
+      "employmentStatus": "employed",
+      "companyName": "Innovative Learning Center",
+      "position": "Curriculum Developer",
+      "yearsOfExperience": 12,
+      "industry": "edu"
+    },
+    "mentor": {
+      "type": "focus",
+      "industries": ["edu", "consult"],
+      "softSkills": ["self_discovery", "cv_interview", "teamwork"],
+      "preferredNumberOfMentees": 3,
+      "preferredMenteeCollegeYear": "sophomore",
+      "preferredMenteeGender": "male"
+    },
+    "bio": {
+      "selfIntroduction": "Dedicated to fostering a love of learning and helping others discover their potential.",
+      "favoriteQuote": "Education is the most powerful weapon which you can use to change the world.",
+      "hobbies": ["Baking", "Embroidery", "Board games"],
+      "favoriteBook": "Educated by Tara Westover",
+      "favoriteMovie": "Dead Poets Society"
+    }
+  },
+  {
+    "id": "10",
+    "uuid": "123e4567-e89b-12d3-a456-426614174010",
+    "fullName": "Hoang Van Son",
+    "phoneNumber": "0945678901",
+    "email": "hoang.vanson@example.com",
+    "gender": "male",
+    "homeTown": "NamDinh",
+    "currentLocation": {
+      "province": "NamDinh"
+    },
+    "birthYear": 1983,
+    "occupation": {
+      "overview": "IT professional with a focus on software development and AI technologies.",
+      "employmentStatus": "employed",
+      "companyName": "Tech Innovations",
+      "position": "Software Engineer",
+      "yearsOfExperience": 14,
+      "industry": "it_sw_ai"
+    },
+    "mentor": {
+      "type": "elite",
+      "industries": ["it_sw_ai", "fin_invest"],
+      "softSkills": ["comm", "cv_interview", "career_orient"],
+      "preferredNumberOfMentees": 6,
+      "preferredMenteeCollegeYear": "thesis",
+      "preferredMenteeGender": "female"
+    },
+    "bio": {
+      "selfIntroduction": "Passionate about technology and mentoring future leaders in the tech industry.",
+      "favoriteQuote": "The best way to predict the future is to invent it.",
+      "hobbies": ["Playing video games", "Collecting", "Origami"],
+      "favoriteBook": "The Innovators by Walter Isaacson",
+      "favoriteMovie": "Inception"
+    }
+  }
+]
