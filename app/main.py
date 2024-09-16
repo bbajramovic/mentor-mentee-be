@@ -1,9 +1,8 @@
 from fastapi import Depends, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from .routers import mentors, mentees, match
+from .routers import mentees, mentors, match
 from app.config import ALLOWED_ORIGINS
-from app.db import db
 
 
 app = FastAPI()
@@ -19,7 +18,6 @@ app.add_middleware(
 app.include_router(mentees.router, prefix='/mentees')
 app.include_router(mentors.router, prefix='/mentors')
 app.include_router(match.router, prefix='/match')
-
 
 @app.get("/")
 async def root():

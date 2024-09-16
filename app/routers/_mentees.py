@@ -1,14 +1,9 @@
 from fastapi import APIRouter
-from app.db import get_all_object, db
 from app.models import Mentee
+from app.db import db, get_all_object
+from pydantic import BaseModel
 
 router = APIRouter()
-
-# Get
-@router.get("/list", tags=["mentees"])
-async def get_all_mentees():
-    mentees = get_all_object("mentees")
-    return mentees
 
 @router.get("/{id}", tags=["mentees"])
 async def get_mentee_info(id: str):
@@ -16,11 +11,21 @@ async def get_mentee_info(id: str):
     data = db.child("mentees").order_by_child("id").equal_to(id).get()
     return data.val()
 
+
+@router.get("/get", tags=["mentees"])
+async def read_items() :
+    data = get_all_object("mentees")
+    return {"mentees": data}
+
+
 @router.post("/add", tags=["mentees"])
 async def add_mentee(mentee: Mentee):
     data = mentee
     # Convert data to dictionary
     data = data.dict()
+    print(data)
     db.child("mentees").push(data)
-    return {"message": "Mentee added!"}
-
+    
+    # Set code success
+    
+    # return {"code": 200, "message": "Success add mentee!"}
