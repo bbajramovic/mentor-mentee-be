@@ -1,6 +1,7 @@
 from fastapi import Depends, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+import uvicorn
 from .routers import mentees, mentors, match
 from app.config import ALLOWED_ORIGINS
 
@@ -23,6 +24,6 @@ app.include_router(match.router, prefix='/match')
 async def root():
     return {"message": "Hello Big Buddy!"}
 
+
 if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)
