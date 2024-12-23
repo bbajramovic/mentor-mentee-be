@@ -86,3 +86,7 @@ class Match(BaseModel):
     createdAt: str
     matchName: str
     groups: List[Group]
+
+class Login(BaseModel):
+    email: str
+    password: str

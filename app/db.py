@@ -20,6 +20,7 @@ firebase = pyrebase.initialize_app(firebase_config)
 auth = firebase.auth()
 
 db = firebase.database()
+auth = firebase.auth()
 
 def get_all_object(object_name):
     objects = db.child(object_name).get()

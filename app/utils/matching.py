@@ -35,7 +35,12 @@ def calculateMatchingRate(mentee:Mentee, mentor:Mentor):
 def generateGroup(mentees, mentors, matchName:Optional[str] = None):
     groups:List[Group] = []
     candidates = []
+    
+
     max_group_size = math.ceil(len(mentees) / len(mentors))
+
+
+
     print("max_gr_sz",max_group_size)
     for mentor in mentors:
         for mentee in mentees:
@@ -81,4 +86,7 @@ def generateGroup(mentees, mentors, matchName:Optional[str] = None):
     
     
     return new_match        
+            
+
+
             
