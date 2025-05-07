@@ -28,6 +28,11 @@ def calculateMatchingRate(mentee:Mentee, mentor:Mentor):
         total_points += 1 
     return total_points
 
+def extract_selfintro(mentee:Mentee, mentor:Mentor): 
+    mentee_selfintro = mentee['bio']['selfIntroduction']
+    mentor_selfintro = mentor['bio']['selfIntroduction']
+    return mentee_selfintro, mentor_selfintro
+
     
 #  Read list of mentees and mentors from mentor.json and mentee.json
 #  Generate a match with the mentees and mentors
