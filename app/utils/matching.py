@@ -6,7 +6,12 @@ from typing import List, Optional
 import datetime
 import uuid
 import math
-
+import nltk
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+from nltk.stem import WordNetLemmatizer
+nltk.download('stopwords')
+nltk.download('punkt')
 
 def calculateMatchingRate(mentee:Mentee, mentor:Mentor):
     total_points = 0
@@ -33,6 +38,18 @@ def extract_selfintro(mentee:Mentee, mentor:Mentor):
     mentor_selfintro = mentor['bio']['selfIntroduction']
     return mentee_selfintro, mentor_selfintro
 
+stop_words = set(stopwords.words('english'))
+lemmatizer = WordNetLemmatizer()
+def clean_and_tokenize(mentee_selfintro, mentor_selfintro):
+    mentee_lowercase = mentee_selfintro.lower()
+    mentor_lowercase = mentor_selfintro.lower()
+    mentee_token = word_tokenize(mentee_lowercase)
+    mentor_token = word_tokenize(mentor_lowercase)
+    mentee_stopwords = [word for word in mentee_token if word not in stop_words]
+    mentor_stopwords = [word for word in mentor_token if word not in stop_words]
+    mentee_lemmatize = [lemmatizer.lemmatize(word) for word in mentee_stopwords]
+    mentor_lemmatize = [lemmatizer.lemmatize(word) for word in mentor_stopwords]
+    return mentee_lemmatize, mentor_lemmatize
     
 #  Read list of mentees and mentors from mentor.json and mentee.json
 #  Generate a match with the mentees and mentors
