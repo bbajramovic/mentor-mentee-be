@@ -4,9 +4,11 @@ import string
 from app.models import (Bio, CurrentLocation, Education, Mentee, Mentor, 
                         MentorDetails, MenteeDetails, Match, Group, MatchMentee,
                         Occupation)
-# from app.utils.array import find_common_element
+from app.utils.array import find_common_element
 from typing import List, Optional
 from underthesea import word_tokenize, pos_tag
+from FlagEmbedding import BGEM3FlagModel
+from sklearn.metrics.pairwise import cosine_similarity
 import datetime
 import uuid
 import math
@@ -19,25 +21,29 @@ vietnamese_stopwords = set([
     "theo", "hiện", "tuy nhiên", "10", "gì", "tới", "lại", "về", "2"
 ])
 
-# def calculateMatchingRate(mentee:Mentee, mentor:Mentor):
-#     total_points = 0
-#     # Accessing attributes using dict[key]
-#     if (mentee['education']['major'] == mentor['occupation']['industry']):
-#         total_points += 2
+def calculateMatchingRate(mentee:Mentee, mentor:Mentor):
+    total_points = 0
+    # Accessing attributes using dict[key]
+    if (mentee.education.major == mentor.occupation.industry):
+        total_points += 2
         
-#     # Assuming find_common_element is a helper function you've defined
-#     wanted_fields = find_common_element(mentee['mentee']['industries'], mentor['mentor']['industries'])
-#     total_points += len(wanted_fields) * 1
+    # Assuming find_common_element is a helper function you've defined
+    wanted_fields = find_common_element(mentee.mentee.industries, mentor.mentor.industries)
+    total_points += len(wanted_fields) * 1
     
-#     wanted_soft_skills = find_common_element(mentee['mentee']['softSkills'], mentor['mentor']['softSkills'])
-#     total_points += len(wanted_soft_skills) * 2   
+    wanted_soft_skills = find_common_element(mentee.mentee.softSkills, mentor.mentor.softSkills)
+    total_points += len(wanted_soft_skills) * 2   
         
-#     if(mentee['gender'] == mentor['gender']):
-#         total_points += 1
+    if(mentee.gender == mentor.gender):
+        total_points += 1
     
-#     if(mentee['education']['currentSchoolYear'] == mentor['mentor']['preferredMenteeCollegeYear']):
-#         total_points += 1 
-#     return total_points
+    if(mentee.education.currentSchoolYear == mentor.mentor.preferredMenteeCollegeYear):
+        total_points += 1 
+
+    selfintro_similarity_score = calculateSelfIntroScore(mentee, mentor)
+    total_points += selfintro_similarity_score
+    
+    return total_points
     
 
 
@@ -67,12 +73,36 @@ def clean_and_tokenize(mentee_intro, mentor_intro):
 
     return lemmatized_mentee, lemmatized_mentor
 
-def calculateMatchingRate(mentee:Mentee, mentor:Mentor): 
+def semantic_similarity(cleaned_mentee, cleaned_mentor):
+    model = BGEM3FlagModel('BAAI/bge-m3',  
+                       use_fp16=True) # Setting use_fp16 to True speeds up computation with a slight performance degradation
+    embeddings_1 = model.encode(cleaned_mentee, 
+                            batch_size=12, 
+                            max_length=6000, # If you don't need such a long length, you can set a smaller value to speed up the encoding process.
+                            )['dense_vecs']
+    embeddings_2 = model.encode(cleaned_mentor)['dense_vecs']
+    similarity_matrix = cosine_similarity(embeddings_1, embeddings_2)
+    return similarity_matrix
+
+def calculateSelfIntroScore(mentee:Mentee, mentor:Mentor): 
     mentee_intro, mentor_intro = extract_selfintro(mentor, mentee)
+    print(f"Mentee Intro: {mentee_intro}")
+    print(f"Mentor Intro: {mentor_intro}")
 
     cleaned_mentee, cleaned_mentor= clean_and_tokenize(mentee_intro, mentor_intro)
+    print(f"Cleaned/Tokenized Mentee Intro: {cleaned_mentee}")
+    print(f"Cleaned/Tokenzied Mentor Intro: {cleaned_mentor}")
 
-    return cleaned_mentee, cleaned_mentor
+    semantic_score_matrix = semantic_similarity(cleaned_mentee, cleaned_mentor)
+
+    # make vector into score
+    semantic_score = float(cosine_similarity(
+        [semantic_score_matrix.mean(axis=1)],
+        [semantic_score_matrix.mean(axis=0)]
+    )[0][0])
+    print(f"Semantic Score (Cos Similarity): {semantic_score}")
+
+    return semantic_score
 
     
 #  Read list of mentees and mentors from mentor.json and mentee.json
@@ -218,7 +248,7 @@ if __name__ == "__main__":
     kobe = Mentee(
         id="2",
         uuid="uuid-kobe",
-        fullName="Kobe Yang",
+        fullName="Kobe",
         phoneNumber="0987654321",
         email="kobe@gmail.com",
         gender="male",
@@ -231,7 +261,7 @@ if __name__ == "__main__":
         bio=my_bio
     )
 
-    printed1, printed2 = calculateMatchingRate(kobe, belma)
-    print(f"Original Intro: Tôi đang học lập trình Python và tìm hiểu cách xử lý ngôn ngữ tự nhiên.")
-    print(f"Cleaned + Tokenized Intro: {printed1}")
+    score = calculateMatchingRate(kobe, belma)
+    print(f"Final Score: {score}")
+    
 
