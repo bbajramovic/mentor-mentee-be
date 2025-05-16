@@ -1,55 +1,79 @@
-from pydantic import BaseModel
-from app.db import db
-from app.models import Mentee, Mentor, Match, Group, MatchMentee
-from app.utils.array import find_common_element
+import string
+# from pydantic import BaseModel
+# from app.db import db
+from app.models import (Bio, CurrentLocation, Education, Mentee, Mentor, 
+                        MentorDetails, MenteeDetails, Match, Group, MatchMentee,
+                        Occupation)
+# from app.utils.array import find_common_element
 from typing import List, Optional
+from underthesea import word_tokenize, pos_tag
 import datetime
 import uuid
 import math
-import nltk
-from nltk.corpus import stopwords
-from nltk.tokenize import word_tokenize
-from nltk.stem import WordNetLemmatizer
-nltk.download('stopwords')
-nltk.download('punkt')
 
-def calculateMatchingRate(mentee:Mentee, mentor:Mentor):
-    total_points = 0
-    # Accessing attributes using dict[key]
-    if (mentee['education']['major'] == mentor['occupation']['industry']):
-        total_points += 2
+vietnamese_stopwords = set([
+    "có", "của", "trong", "các", "được", "đến", "và", "nhiều", "này", "một",
+    "chỉ", "đó", "sẽ", "số", "để", "đã", "ở", "những", "vào", "qua", "đi",
+    "không", "là", "ra", "mà", "khi", "rằng", "từ", "năm", "rất", "hay", "tại",
+    "sau", "bị", "đều", "vẫn", "lần", "như", "đồng", "mình", "còn", "xảy", "đợt",
+    "theo", "hiện", "tuy nhiên", "10", "gì", "tới", "lại", "về", "2"
+])
+
+# def calculateMatchingRate(mentee:Mentee, mentor:Mentor):
+#     total_points = 0
+#     # Accessing attributes using dict[key]
+#     if (mentee['education']['major'] == mentor['occupation']['industry']):
+#         total_points += 2
         
-    # Assuming find_common_element is a helper function you've defined
-    wanted_fields = find_common_element(mentee['mentee']['industries'], mentor['mentor']['industries'])
-    total_points += len(wanted_fields) * 1
+#     # Assuming find_common_element is a helper function you've defined
+#     wanted_fields = find_common_element(mentee['mentee']['industries'], mentor['mentor']['industries'])
+#     total_points += len(wanted_fields) * 1
     
-    wanted_soft_skills = find_common_element(mentee['mentee']['softSkills'], mentor['mentor']['softSkills'])
-    total_points += len(wanted_soft_skills) * 2   
+#     wanted_soft_skills = find_common_element(mentee['mentee']['softSkills'], mentor['mentor']['softSkills'])
+#     total_points += len(wanted_soft_skills) * 2   
         
-    if(mentee['gender'] == mentor['gender']):
-        total_points += 1
+#     if(mentee['gender'] == mentor['gender']):
+#         total_points += 1
     
-    if(mentee['education']['currentSchoolYear'] == mentor['mentor']['preferredMenteeCollegeYear']):
-        total_points += 1 
-    return total_points
+#     if(mentee['education']['currentSchoolYear'] == mentor['mentor']['preferredMenteeCollegeYear']):
+#         total_points += 1 
+#     return total_points
+    
+
 
 def extract_selfintro(mentee:Mentee, mentor:Mentor): 
-    mentee_selfintro = mentee['bio']['selfIntroduction']
-    mentor_selfintro = mentor['bio']['selfIntroduction']
+    mentee_selfintro = mentee.bio.selfIntroduction
+    mentor_selfintro = mentor.bio.selfIntroduction
     return mentee_selfintro, mentor_selfintro
 
-stop_words = set(stopwords.words('english'))
-lemmatizer = WordNetLemmatizer()
-def clean_and_tokenize(mentee_selfintro, mentor_selfintro):
-    mentee_lowercase = mentee_selfintro.lower()
-    mentor_lowercase = mentor_selfintro.lower()
-    mentee_token = word_tokenize(mentee_lowercase)
-    mentor_token = word_tokenize(mentor_lowercase)
-    mentee_stopwords = [word for word in mentee_token if word not in stop_words]
-    mentor_stopwords = [word for word in mentor_token if word not in stop_words]
-    mentee_lemmatize = [lemmatizer.lemmatize(word) for word in mentee_stopwords]
-    mentor_lemmatize = [lemmatizer.lemmatize(word) for word in mentor_stopwords]
-    return mentee_lemmatize, mentor_lemmatize
+def clean_and_tokenize(mentee_intro, mentor_intro):
+    mentee_intro = mentee_intro.lower()
+    mentor_intro = mentor_intro.lower()
+
+    mentee_tokenized = word_tokenize(mentee_intro)
+    mentor_tokenized = word_tokenize(mentor_intro)
+
+    mentee_tokenized = [word for word in mentee_tokenized if word not in string.punctuation]
+    mentor_tokenized = [word for word in mentor_tokenized if word not in string.punctuation]
+    
+    filtered_mentee = [word for word in mentee_tokenized if word not in vietnamese_stopwords]
+    filtered_mentor = [word for word in mentor_tokenized if word not in vietnamese_stopwords]
+
+    pos_tags_mentee = pos_tag(' '.join(filtered_mentee))
+    pos_tags_mentor = pos_tag(' '.join(filtered_mentor))
+
+    lemmatized_mentee = [word for word, pos in pos_tags_mentee]
+    lemmatized_mentor = [word for word, pos in pos_tags_mentor]
+
+    return lemmatized_mentee, lemmatized_mentor
+
+def calculateMatchingRate(mentee:Mentee, mentor:Mentor): 
+    mentee_intro, mentor_intro = extract_selfintro(mentor, mentee)
+
+    cleaned_mentee, cleaned_mentor= clean_and_tokenize(mentee_intro, mentor_intro)
+
+    return cleaned_mentee, cleaned_mentor
+
     
 #  Read list of mentees and mentors from mentor.json and mentee.json
 #  Generate a match with the mentees and mentors
@@ -110,5 +134,104 @@ def generateGroup(mentees, mentors, matchName:Optional[str] = None):
     return new_match        
             
 
+if __name__ == "__main__": 
+    # my_current_location = CurrentLocation("USA")
+    # my_occupation = Occupation("Employed", "UCSD")
+    # my_mentor_details = MentorDetails(["SWE", "ECE"], ["Leadership", "Nice"], 3, "Junior", "Female")
+    # my_mentee_details = MentorDetails(["SWE", "ECE"], ["Leadership", "Nice"], 3, "Junior", "Female")
+    # my_mentor_bio = Bio("Tôi đang học lập trình Python và tìm hiểu cách xử lý ngôn ngữ tự nhiên.", 
+    #                     "I love books", ["Watching Movies", "Playing games"], "Harry Potter",
+    #                     "Harry Potter")
+    
 
-            
+
+    # belma = Mentor("0", "0", "Belma Bajramovic", "0", "a@gmail.com", "female", "hometown", 
+    #                my_current_location, 5, my_occupation, my_mentor_details, my_mentor_bio)
+    # kobe = Mentee("0", "0", "Kobe Yang", "0", "a@gmail.com", "male", "hometown", 
+    #                my_current_location, 5, my_occupation, my_mentee_details, my_mentor_bio)
+    
+    # Current location for both
+    my_current_location = CurrentLocation(province="USA", district="California")
+
+    # Occupation details
+    my_occupation = Occupation(
+        employmentStatus="Employed",
+        companyName="UCSD",
+        position="Research Assistant",
+        employmentLevel="Intern",
+        yearsOfExperience=1,
+        industry="Education"
+    )
+
+    # Mentor-specific details
+    my_mentor_details = MentorDetails(
+        industries=["SWE", "ECE"],
+        softSkills=["Leadership", "Empathy"],
+        preferredNumberOfMentees=3,
+        preferredMenteeCollegeYear="Junior",
+        preferredMenteeGender="Female"
+    )
+
+    # Mentee-specific details
+    my_mentee_details = MenteeDetails(
+        industries=["SWE", "ECE"],
+        softSkills=["Leadership", "Empathy"],
+        preferredMentorGender="Female",
+        preferredForeignMentor=False,
+        preferredMentorType="Career guidance"
+    )
+
+    # Bio
+    my_bio = Bio(
+        selfIntroduction="Tôi đang học lập trình Python và tìm hiểu cách xử lý ngôn ngữ tự nhiên.",
+        favoriteQuote="I love books",
+        hobbies=["Watching Movies", "Playing Games"],
+        favoriteBook="Harry Potter",
+        favoriteMovie="Harry Potter"
+    )
+
+    # Education for mentee
+    my_education = Education(
+        currentSchool="UC San Diego",
+        major="Computer Engineering",
+        currentSchoolYear="Junior",
+        latestGPA=3.8
+    )
+
+    # Mentor object
+    belma = Mentor(
+        id="1",
+        uuid="uuid-belma",
+        fullName="Belma Bajramovic",
+        phoneNumber="1234567890",
+        email="belma@gmail.com",
+        gender="female",
+        homeTown="Sarajevo",
+        currentLocation=my_current_location,
+        birthYear=2003,
+        occupation=my_occupation,
+        mentor=my_mentor_details,
+        bio=my_bio
+    )
+
+    # Mentee object
+    kobe = Mentee(
+        id="2",
+        uuid="uuid-kobe",
+        fullName="Kobe Yang",
+        phoneNumber="0987654321",
+        email="kobe@gmail.com",
+        gender="male",
+        homeTown="Hanoi",
+        currentLocation=my_current_location,
+        birthYear=2004,
+        education=my_education,
+        occupation=my_occupation,
+        mentee=my_mentee_details,
+        bio=my_bio
+    )
+
+    printed1, printed2 = calculateMatchingRate(kobe, belma)
+    print(f"Original Intro: Tôi đang học lập trình Python và tìm hiểu cách xử lý ngôn ngữ tự nhiên.")
+    print(f"Cleaned + Tokenized Intro: {printed1}")
+
