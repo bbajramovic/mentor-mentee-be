@@ -40,6 +40,7 @@ def calculateMatchingRate(mentee:Mentee, mentor:Mentor):
     if(mentee.education.currentSchoolYear == mentor.mentor.preferredMenteeCollegeYear):
         total_points += 1 
 
+    # Similarity score weight = 1
     selfintro_similarity_score = calculateSelfIntroScore(mentee, mentor)
     total_points += selfintro_similarity_score
     
@@ -74,6 +75,9 @@ def clean_and_tokenize(mentee_intro, mentor_intro):
     return lemmatized_mentee, lemmatized_mentor
 
 def semantic_similarity(cleaned_mentee, cleaned_mentor):
+
+    # Use ML model from Huggingface to calculate similarity_matrix
+
     model = BGEM3FlagModel('BAAI/bge-m3',  
                        use_fp16=True) # Setting use_fp16 to True speeds up computation with a slight performance degradation
     embeddings_1 = model.encode(cleaned_mentee, 
@@ -89,6 +93,7 @@ def calculateSelfIntroScore(mentee:Mentee, mentor:Mentor):
     print(f"Mentee Intro: {mentee_intro}")
     print(f"Mentor Intro: {mentor_intro}")
 
+    # Tokenizing text
     cleaned_mentee, cleaned_mentor= clean_and_tokenize(mentee_intro, mentor_intro)
     print(f"Cleaned/Tokenized Mentee Intro: {cleaned_mentee}")
     print(f"Cleaned/Tokenzied Mentor Intro: {cleaned_mentor}")
@@ -161,107 +166,5 @@ def generateGroup(mentees, mentors, matchName:Optional[str] = None):
     
     
     
-    return new_match        
-            
-
-if __name__ == "__main__": 
-    # my_current_location = CurrentLocation("USA")
-    # my_occupation = Occupation("Employed", "UCSD")
-    # my_mentor_details = MentorDetails(["SWE", "ECE"], ["Leadership", "Nice"], 3, "Junior", "Female")
-    # my_mentee_details = MentorDetails(["SWE", "ECE"], ["Leadership", "Nice"], 3, "Junior", "Female")
-    # my_mentor_bio = Bio("Tôi đang học lập trình Python và tìm hiểu cách xử lý ngôn ngữ tự nhiên.", 
-    #                     "I love books", ["Watching Movies", "Playing games"], "Harry Potter",
-    #                     "Harry Potter")
-    
-
-
-    # belma = Mentor("0", "0", "Belma Bajramovic", "0", "a@gmail.com", "female", "hometown", 
-    #                my_current_location, 5, my_occupation, my_mentor_details, my_mentor_bio)
-    # kobe = Mentee("0", "0", "Kobe Yang", "0", "a@gmail.com", "male", "hometown", 
-    #                my_current_location, 5, my_occupation, my_mentee_details, my_mentor_bio)
-    
-    # Current location for both
-    my_current_location = CurrentLocation(province="USA", district="California")
-
-    # Occupation details
-    my_occupation = Occupation(
-        employmentStatus="Employed",
-        companyName="UCSD",
-        position="Research Assistant",
-        employmentLevel="Intern",
-        yearsOfExperience=1,
-        industry="Education"
-    )
-
-    # Mentor-specific details
-    my_mentor_details = MentorDetails(
-        industries=["SWE", "ECE"],
-        softSkills=["Leadership", "Empathy"],
-        preferredNumberOfMentees=3,
-        preferredMenteeCollegeYear="Junior",
-        preferredMenteeGender="Female"
-    )
-
-    # Mentee-specific details
-    my_mentee_details = MenteeDetails(
-        industries=["SWE", "ECE"],
-        softSkills=["Leadership", "Empathy"],
-        preferredMentorGender="Female",
-        preferredForeignMentor=False,
-        preferredMentorType="Career guidance"
-    )
-
-    # Bio
-    my_bio = Bio(
-        selfIntroduction="Tôi đang học lập trình Python và tìm hiểu cách xử lý ngôn ngữ tự nhiên.",
-        favoriteQuote="I love books",
-        hobbies=["Watching Movies", "Playing Games"],
-        favoriteBook="Harry Potter",
-        favoriteMovie="Harry Potter"
-    )
-
-    # Education for mentee
-    my_education = Education(
-        currentSchool="UC San Diego",
-        major="Computer Engineering",
-        currentSchoolYear="Junior",
-        latestGPA=3.8
-    )
-
-    # Mentor object
-    belma = Mentor(
-        id="1",
-        uuid="uuid-belma",
-        fullName="Belma Bajramovic",
-        phoneNumber="1234567890",
-        email="belma@gmail.com",
-        gender="female",
-        homeTown="Sarajevo",
-        currentLocation=my_current_location,
-        birthYear=2003,
-        occupation=my_occupation,
-        mentor=my_mentor_details,
-        bio=my_bio
-    )
-
-    # Mentee object
-    kobe = Mentee(
-        id="2",
-        uuid="uuid-kobe",
-        fullName="Kobe",
-        phoneNumber="0987654321",
-        email="kobe@gmail.com",
-        gender="male",
-        homeTown="Hanoi",
-        currentLocation=my_current_location,
-        birthYear=2004,
-        education=my_education,
-        occupation=my_occupation,
-        mentee=my_mentee_details,
-        bio=my_bio
-    )
-
-    score = calculateMatchingRate(kobe, belma)
-    print(f"Final Score: {score}")
-    
-
+    return new_match
+      
