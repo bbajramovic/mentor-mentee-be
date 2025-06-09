@@ -9,6 +9,7 @@ from app.models import (
 )
 from app.utils.array import find_common_element
 from app.utils.selfintro_similarity import calculateSelfIntroScore
+from app.utils.global_matching import generate_global_match
 
 
 def calculateMatchingRate(mentee:Mentee, mentor:Mentor):
@@ -34,7 +35,16 @@ def calculateMatchingRate(mentee:Mentee, mentor:Mentor):
     total_points += selfintro_similarity_score
     
     return total_points
-    
+
+# High level switch to determine which generate group method to use
+def generate_match(mentees, mentors, method="greedy"):
+    if method == "global":
+        return generate_global_match(
+            mentees, mentors,
+            max_group_size=math.ceil(len(mentees)/len(mentors))
+        )
+    return generateGroup(mentees, mentors)
+
 #  Read list of mentees and mentors from mentor.json and mentee.json
 #  Generate a match with the mentees and mentors
 
